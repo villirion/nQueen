@@ -78,7 +78,7 @@ int nextNoConsPerm(int *perm, const int n){
             }
             swapVal(&perm[i - 1],&perm[j]);
             OK=0;
-            for (i = 0; i < n; i++){
+            for (i = 0; i < n-1; i++){
                 if ((perm[i] == perm[i+1]+1)||(perm[i] == perm[i+1]-1)){
                     OK=1;
                     break;
