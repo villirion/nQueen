@@ -11,3 +11,6 @@ nQueenBacktracking.py 0.44 sec for 10 queens
 solving the problem with backtracking in python
 
 nQueenBacktracking.c 0.03 sec for 10 queens
+
+nQueenBin is a translation of the 4th C code on rosettacode
+https://rosettacode.org/wiki/N-queens_problem#C
