@@ -15,3 +15,5 @@ nQueenBacktracking.c 0.03 sec for 10 queens
 nQueenBin.py is a translation of the 4th C code on rosettacode
 0.03 sec for 10 queens without printing the solutions
 https://rosettacode.org/wiki/N-queens_problem#C
+
+nQueenOneSol.py create one solution for every n
