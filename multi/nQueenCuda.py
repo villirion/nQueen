@@ -1,6 +1,5 @@
 from numba import cuda
 import numpy as np
-import numba as nb
 import time
 
 cuda.select_device(0)
@@ -33,10 +32,10 @@ tps1 = time.time()
 
 n = 14 ## max avec 32 Go de mémoire
 
-solutions = np.array(np.zeros(shape=(n,n)),np.int8)
+solutions = np.zeros(shape=(n,n),dtype=np.int8)
 for i in range(n):
     solutions[i][0]=i+1
-newsolutions =np.array(np.zeros(shape=(n*n,n)),np.int8)
+newsolutions = np.zeros(shape=(n*n,n),np.int8)
     
 nbsols=n
 nbThread=n
@@ -49,7 +48,7 @@ for i in range(n-1):
     solutions = d_arr.copy_to_host()
     solutions= np.delete(solutions,np.where(~solutions.any(axis=1))[0], axis=0)
     nbsols = len(solutions)
-    newsolutions =np.array(np.zeros(shape=(nbsols*n,n)),np.int8)
+    newsolutions = np.zeros(shape=(nbsols*n,n),np.int8)
 
 tps2 = time.time()
 tmp1 = tps2 - tps1
